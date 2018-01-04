@@ -49,7 +49,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <h4 class="cta-title"><strong>Ingin tahu lebih banyak tentang Customer Service Indonesia?</strong>  </h4>
-                        <a href="http://www.boox.asia" class="main-button accent-color">kunjungi CS<i class="icon-button fa fa-arrow-right"></i></a>
+                        <a href="http://www.jne.co.id" class="main-button accent-color">kunjungi CS<i class="icon-button fa fa-arrow-right"></i></a>
                     </div> <!-- /.col-md-12 -->
                 </div> <!-- /.row -->
             </div> <!-- /.container -->
@@ -62,7 +62,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="contact-wrapper">
-                                <h3>Punya keluhan yang ingin disampaikan ke Boox?</h3>
+                                <h3>Punya keluhan yang ingin disampaikan?</h3>
                                 <p>Kami senantiasa memberikan pelayanan yang terbaik untuk pelanggan kami. Kami sangat peduli pada kepuasan pelanggan. Untuk itu, demi memberikan pelayanan terbaik, Jika Anda memiliki keluhan yan ingin Anda sampaikan kepada kami silakan mengisi formulir yang tersedia di bawah ini. <br>Anda juga dapat mengecek status keluhan Anda dengan mencatumkan <i><u>ID Complaint</u></i> yang ada pada keluhan yang telah Anda kirim ke kami.<br></p>
 <!--                                <p><strong>Login dibutuhkan untuk menyampaikan keluhan.</strong></p>      -->
                             </div> <!-- /.contact-wrapper -->

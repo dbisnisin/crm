@@ -44,7 +44,7 @@
                 </div> <!-- /.row -->
                 <div class="row">
                     <div class="col-md-12">
-                        <p class="copyright-text">Copyright &copy; 2016 - Fendi Septiawan</p>
+                        <p class="copyright-text">Copyright &copy; 2018 - Akhmad Ridwan</p>
                     </div> <!-- /.col-md-12 -->
                 </div> <!-- /.row -->
             </div> <!-- /.container -->

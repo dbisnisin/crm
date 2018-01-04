@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.2
--- http://www.phpmyadmin.net
+-- version 4.7.7
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 24 Mar 2016 pada 15.23
--- Versi Server: 5.6.16
--- PHP Version: 5.5.11
+-- Generation Time: Jan 04, 2018 at 06:04 AM
+-- Server version: 10.1.29-MariaDB
+-- PHP Version: 7.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -17,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `boox_customer_service`
+-- Database: `customer_service`
 --
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `akun`
+-- Table structure for table `akun`
 --
 
 CREATE TABLE `akun` (
@@ -36,16 +38,17 @@ CREATE TABLE `akun` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data untuk tabel `akun`
+-- Dumping data for table `akun`
 --
 
 INSERT INTO `akun` (`id_akun`, `nama_akun`, `email_akun`, `username_akun`, `password_akun`, `level_akun`) VALUES
-(1, 'Admin Master', 'admin@boox.asia', 'admin', '21232f297a57a5a743894a0e4a801fc3', 1);
+(1, 'Admin Master', 'admin@cs.co.id', 'admin', '21232f297a57a5a743894a0e4a801fc3', 1),
+(2, 'Admin', 'iwan.bazz@gmail.com', 'iwan', '01ccce480c60fcdb67b54f4509ffdb56', 1);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `keluhan`
+-- Table structure for table `keluhan`
 --
 
 CREATE TABLE `keluhan` (
@@ -60,18 +63,6 @@ CREATE TABLE `keluhan` (
   `tgl_proses` timestamp NULL DEFAULT NULL,
   `tgl_selesai` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='			';
-
---
--- Dumping data untuk tabel `keluhan`
---
-
-INSERT INTO `keluhan` (`id_keluhan`, `id_akun`, `nama_pelanggan`, `email_pelanggan`, `judul_keluhan`, `deskrip_keluhan`, `status_keluhan`, `tgl_keluhan`, `tgl_proses`, `tgl_selesai`) VALUES
-(1, NULL, 'Joko', 'fendi_septiawan0709@yahoo.co.id', 'Topik coba', 'Keluhan coba', 'Belum', '2016-03-24 13:15:29', NULL, NULL),
-(2, NULL, 'Fendi', 'fendi.septiawan0709@gmail.com', 'Topik', 'Keluhan', 'Selesai', '2016-03-24 13:26:55', '2016-03-24 14:18:51', '2016-03-24 14:21:16'),
-(3, NULL, 'Fariz', 'fendi.septiawan0709@gmail.com', 'jhlsndnc', 'jnjsnfjlncdlc', 'Proses', '2016-03-24 13:31:54', '2016-03-24 14:21:02', NULL),
-(4, NULL, 'Rahmad', 'fendi.septiawan0709@gmail.com', 'Topik', 'Keluhan', 'Belum', '2016-03-24 13:38:17', NULL, NULL),
-(5, NULL, 'Bagus', 'fendi.septiawan0709@gmail.com', 'TIdak punya topik', 'tidak tahu', 'Belum', '2016-03-24 13:44:12', NULL, NULL),
-(6, NULL, 'Dichy', 'fendi.septiawan0709@gmail.com', 'jsncjn', 'jlnsdlcnslkdc', 'Belum', '2016-03-24 13:49:13', NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -98,16 +89,18 @@ ALTER TABLE `keluhan`
 -- AUTO_INCREMENT for table `keluhan`
 --
 ALTER TABLE `keluhan`
-  MODIFY `id_keluhan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_keluhan` int(11) NOT NULL AUTO_INCREMENT;
+
 --
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+-- Constraints for dumped tables
 --
 
 --
--- Ketidakleluasaan untuk tabel `keluhan`
+-- Constraints for table `keluhan`
 --
 ALTER TABLE `keluhan`
   ADD CONSTRAINT `keluhan_ibfk_1` FOREIGN KEY (`id_akun`) REFERENCES `akun` (`id_akun`);
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
